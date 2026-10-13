@@ -52,7 +52,7 @@ hermes-workbench/
 │   ├── workbench-graph/        #   看板插件（dashboard/ + 运行时文件）
 │   └── desktop-plugins/        #   三个桌面插件（plugin.js）
 ├── tools/                      # 构建期与运维脚本（含 QQ 机器人一键绑定）
-├── docs/                       # 架构 / 复刻步骤 / 审计报告 / 各智能体设定
+├── docs/                       # 架构 / 复刻步骤 / 执行分工 / 审计报告 / 各智能体设定
 └── assets/screenshots/         # 界面截图与图标
 ```
 
@@ -91,7 +91,7 @@ hermes-workbench/
 3. 安装并登录六款软件本体，拷贝 `plugins/` 到对应目录；
 4. 拷贝 `daemons/` 到 `<repo>\.build\workbench\`，把 `startup/` 两个 VBS 放进「启动」文件夹；
 5. 部署 `gateway/`（`uv run --with workbuddy2api python -m codebuddy_proxy`）；
-6. 按 `docs/reproduction.md` 的验证清单逐项核对。
+6. 按 `docs/reproduction.md` 的验证清单逐项核对（或一步跑完：`python tools/verify-install.py`）。
 
 ## 6. 安全说明
 
@@ -103,6 +103,7 @@ hermes-workbench/
 ## 7. 文档
 
 - [`docs/architecture.md`](docs/architecture.md) —— 组件、数据流、卡片生命周期
+- [`docs/orchestration.md`](docs/orchestration.md) —— 执行分工与派活规约（三层架构 / 通道命令 / 验收规约）
 - [`docs/reproduction.md`](docs/reproduction.md) —— 从零复刻步骤 + 验证清单
 - [`docs/changelog-2026-10-12.md`](docs/changelog-2026-10-12.md) —— 2026-10-12 深度检查与优化轮记录
 - [`docs/audits/`](docs/audits) —— 三路代码/守护/i18n 审计报告（含执行引擎声明）

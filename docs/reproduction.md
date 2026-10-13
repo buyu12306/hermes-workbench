@@ -57,6 +57,7 @@
 
 ## 7. 验证清单（照做一遍）
 
+- [ ] **一键自检（推荐先跑）**：`python tools/verify-install.py` → 六项 PASS / SKIP、退出码 0（有 FAIL 则退出码 1）
 - [ ] `hermes gateway status`（消息网关在线；QQ 通道绑定后可收消息）
 - [ ] `90-keepawake.cmd status` → 守护 RUNNING；忙时 `ac_sec=0`，`stop` 后恢复 300s
 - [ ] `curl http://127.0.0.1:8787/v1/models` → 200（带 Bearer codebuddy-local）
