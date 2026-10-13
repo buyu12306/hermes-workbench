@@ -1,0 +1,10 @@
+{
+  "name": "workbench-graph",
+  "label": "Workbench Graph",
+  "description": "Live kanban task data for the desktop workflow graph view",
+  "version": "1.0.0",
+  "tab": {
+    "hidden": true
+  },
+  "api": "plugin_api.py"
+}

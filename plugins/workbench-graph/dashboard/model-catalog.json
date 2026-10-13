@@ -1,0 +1,85 @@
+{
+  "claude-code": {
+    "options": [
+      "glm-5.2",
+      "qwen3.8-max",
+      "kimi-k3",
+      "deepseek-v4-flash-0731",
+      "u2",
+      "u2-med",
+      "kimi-k2.5",
+      "kimi-k2.6",
+      "glm-5.1",
+      "glm-5",
+      "MiniMax-M2.5",
+      "qwen3.6-35b-a3b",
+      "qwen3.7-plus",
+      "qwen3.6-plus",
+      "qwen3.6-flash",
+      "qwen3.7-max",
+      "deepseek-v4-pro",
+      "u2-flash",
+      "glm-5.3-flash",
+      "MiniMax-M3",
+      "qwen3.8-flash",
+      "glm-5.3"
+    ],
+    "source": "maas-api.unisound.com /v1/models",
+    "updated_at": "2026-10-12 19:53"
+  },
+  "deepseek-harness": {
+    "options": [
+      "deepseek-flash",
+      "deepseek-v4-pro"
+    ],
+    "source": "api.deepseek.com /v1/models",
+    "updated_at": "2026-10-12 19:53"
+  },
+  "qoder": {
+    "options": [
+      "Auto",
+      "Qwen3.8-Max",
+      "Qwen3.8-Flash",
+      "Qwen3.7-Max",
+      "Qwen3.7-Plus",
+      "Qwen3.7-Flash",
+      "DeepSeek-V4-Pro",
+      "DeepSeek-Flash",
+      "GLM-5.3",
+      "GLM-5.3-Flash",
+      "GLM-5.2",
+      "Kimi-K3",
+      "Kimi-K2.8-Preview",
+      "MiniMax-M2.7",
+      "Qwen-3.8-Flash",
+      "Qwen-3.8-Max"
+    ],
+    "source": "qoderclicn --list-models",
+    "updated_at": "2026-10-12 19:53"
+  },
+  "workbuddy": {
+    "options": [
+      "hy4-preview-f",
+      "hy3",
+      "hy3-x",
+      "step-5-preview",
+      "space-bunny",
+      "deepseek-v4.1-flash",
+      "glm-5.3",
+      "glm-5.3-flash",
+      "glm-5.2",
+      "glm-5.1",
+      "glm-5v-turbo",
+      "minimax-m3",
+      "minimax-m2.7",
+      "kimi-k3-1",
+      "kimi-k2.8-preview",
+      "kimi-k2.7",
+      "kimi-k2.6",
+      "deepseek-v4-pro",
+      "auto"
+    ],
+    "source": "codebuddy --help",
+    "updated_at": "2026-10-12 19:53"
+  }
+}

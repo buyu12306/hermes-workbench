@@ -1,0 +1,8 @@
+# Keep Windows-critical line endings; text detection is not wanted here.
+* -text
+*.cmd text eol=crlf
+*.vbs text eol=crlf
+*.ps1 text eol=crlf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf

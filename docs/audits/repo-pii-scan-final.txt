@@ -1,0 +1,57 @@
+=== SCAN REPORT ===
+repo: C:\Users\<用户名>\Desktop\工作区\hermes-workbench-repo
+
+files_scanned=180
+
+-- pattern win_username: 0 hits
+
+-- pattern gh_account: 0 hits
+
+-- pattern email: 2 hits
+   daemons\74-wb-fallback-setup.py:3: - fallback_providers = [hy4-preview-f@gateway, hy3@gateway, deepseek-flash@api.deepseek.com (last-resort, paid)]
+   docs\audits\report-daemons.md:116: **职责**：一次性把 workbuddy profile 的 `fallback_providers` 换成 `hy4-preview-f@gateway → hy3@gateway → deepseek-flash@api.deepseek.com(付费)`，并把 hy3 加进 `providers.custom.
+
+-- pattern mac: 0 hits
+
+-- pattern private_ip: 0 hits
+
+-- pattern cn_mobile: 0 hits
+
+-- pattern api_keyish: 0 hits
+
+-- pattern jwt: 0 hits
+
+-- pattern bearer: 0 hits
+
+-- pattern qq_ref: 10 hits
+   daemons\82-qq-onboard.py:19: from gateway.platforms.qqbot import qr_register
+   daemons\85-show-qq-qr.py:18: m = re.search(r'(https://q\.qq\.com/qqbot/openclaw/connect\.html\?task_id=[^\s]+)', t)
+   daemons\86-apply-qq-env.py:24: upsert('QQ_APP_ID', creds['app_id'])
+   daemons\86-apply-qq-env.py:26: openid = (creds.get('user_openid') or '').strip()
+   daemons\86-apply-qq-env.py:27: if openid:
+   daemons\86-apply-qq-env.py:28: upsert('QQ_ALLOWED_USERS', openid)
+   daemons\86-apply-qq-env.py:29: upsert('QQBOT_HOME_CHANNEL', openid)
+   daemons\86-apply-qq-env.py:35: if openid:
+
+-- pattern hostname: 27 hits
+   docs\architecture.md:55: | `%LOCALAPPDATA%\hermes\desktop-plugins\` | 三个桌面插件 |
+   docs\audits\cards\d1-card-audit-code.md:4: 1. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-graph\plugin.js （约60KB）
+   docs\audits\cards\d1-card-audit-code.md:5: 2. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-overview\plugin.js
+   docs\audits\cards\d1-card-audit-code.md:6: 3. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-field\plugin.js
+   docs\audits\cards\d1-card-i18n.md:4: 1. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-graph\plugin.js
+   docs\audits\cards\d1-card-i18n.md:5: 2. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-overview\plugin.js
+   docs\audits\cards\d1-card-i18n.md:6: 3. C:\Users\<用户名>\AppData\Local\hermes\desktop-plugins\workbench-field\plugin.js
+   docs\audits\report-audit-code.md:6: 1. `C:/Users/<用户名>/AppData/Local/hermes/desktop-plugins/workbench-graph/plugin.js` — 1142 行 / 60145 B — sha256 前 12 位：`5e5e60c52b28`
+
+-- pattern session_id: 0 hits
+
+=== key/token VALUE audit (distinct RHS) ===
+   [20x] <YOUR_API_KEY>   e.g. config\config.yaml
+   [11x] codebuddy-local   e.g. config\config.yaml
+
+=== risky file inventory (db/log/env/pem/key/bak) ===
+   (none)
+
+=== git history scan (all revs, -l file list) ===
+revs: ['07006a94c392e3a06d871636d44a1b696d36c422']
+files in history matching critical patterns: 0

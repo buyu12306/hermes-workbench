@@ -1,0 +1,93 @@
+model:
+  provider: custom
+  base_url: https://api.deepseek.com
+  default: deepseek-flash
+  api_key: "<YOUR_API_KEY>"
+  api_mode: chat_completions
+telemetry:
+  shared_metrics:
+    enabled: false
+    send: false
+    offer_version: 2
+onboarding:
+  seen:
+    tool_progress_prompt: true
+_config_version: 50
+mcp_servers:
+  powershell:
+    command: C:/Program Files/nodejs/npx.CMD
+    args:
+      - -y
+      - '@imrrd/powershell-mcp'
+    enabled: true
+    trust: untrusted
+    timeout: 120
+    connect_timeout: 90
+  filesystem:
+    command: C:/Users/<用户名>/.workbuddy/binaries/node/versions/22.22.2-6/node.exe
+    args:
+      - C:/Users/<用户名>/.workbuddy/binaries/node/workspace/node_modules/@modelcontextprotocol/server-filesystem/dist/index.js
+      - C:/Users/<用户名>/Desktop
+      - C:/Users/<用户名>/WorkBuddy
+    connect_timeout: 90.0
+    enabled: true
+  memory:
+    command: C:/Users/<用户名>/.workbuddy/binaries/node/versions/22.22.2-6/node.exe
+    args:
+      - C:/Users/<用户名>/.workbuddy/binaries/node/workspace/node_modules/@modelcontextprotocol/server-memory/dist/index.js
+    env:
+      MEMORY_FILE_PATH: C:/Users/<用户名>/AppData/Local/hermes/mcp-memory.json
+    connect_timeout: 90.0
+    enabled: true
+  context7:
+    url: https://mcp.context7.com/mcp
+    enabled: true
+  sqlite:
+    command: C:/Users/<用户名>/.workbuddy/binaries/python/envs/mcp/Scripts/mcp-server-sqlite.exe
+    args:
+      - --db-path
+      - C:/Users/<用户名>/AppData/Local/hermes/hermes.db
+    connect_timeout: 90.0
+    enabled: true
+  fetch:
+    command: C:/Users/<用户名>/.workbuddy/binaries/python/envs/mcp/Scripts/mcp-server-fetch.exe
+    connect_timeout: 90.0
+    enabled: true
+agent:
+  reasoning_effort: max
+display:
+  skin: hermes-workbench
+plugins:
+  enabled:
+    - workbench-graph
+providers:
+  custom:
+    base_url: https://api.deepseek.com
+    api_key: "<YOUR_API_KEY>"
+    models:
+      - deepseek-flash
+  wbgateway:
+    base_url: http://127.0.0.1:8787/v1
+    api_key: "codebuddy-local"
+    models:
+      - step-5-preview
+      - hy4-preview-f
+      - hy3
+    api_mode: chat_completions
+compression:
+  threshold_tokens: 160000
+auxiliary:
+  background_review:
+    max_input_tokens: 150000
+
+  compression:
+    provider: wbgateway
+    model: step-5-preview
+    context_length: 1000000
+    timeout: 360
+    fallback_chain:
+      - provider: custom
+        model: deepseek-flash
+        base_url: https://api.deepseek.com/v1
+        api_key: "<YOUR_API_KEY>"
+        api_mode: chat_completions

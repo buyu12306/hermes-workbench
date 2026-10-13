@@ -1,0 +1,20 @@
+# logs / runtime / caches
+*.log
+*.out
+*.jsonl
+__pycache__/
+*.pyc
+.venv/
+node_modules/
+
+# backups
+*.bak
+*.bak-*
+
+# local state
+*.db
+*.db-shm
+*.db-wal
+keepawake-power.json
+selection.json
+quota-guard-state.json
